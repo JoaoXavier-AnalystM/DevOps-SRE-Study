@@ -1,0 +1,50 @@
+## Criando Cluste
+kind create cluster
+
+## Verificando criação
+kubectl get nodes
+
+## Criando deployment 
+kubectl create deployment nginx --image=nginx
+
+## Verificando criação do deployment
+kubectl get pods
+
+## Expondo portas do pod
+kubectl port-forward pod/nginx-76d6c9b8c-nvs8q 8000:80
+
+## Criando Cluster e nomeando 
+kind create cluster --name=devopssre
+
+## Deleteando Cluster
+kind delete cluster --name nomecluster
+
+##############################################
+
+  Id CommandLine
+  -- -----------
+   1 cd .\K8s\
+   2 kind create cluster
+   3 kind create cluster
+   4 kubectl get nodes
+   5 kubectl create deployment nginx --image=nginx
+   6 kubectl get nodes
+   7 kubectl get pods
+   8 kubectl get pods
+   9 kubectl port-forward pod/nginx-76d6c9b8c-nvs8q 7070
+  10 kubectl port-forward pod/nginx-76d6c9b8c-nvs8q 7070:80
+  11 kind create cluster --name=devopssre
+  12 kind get cluster
+  13 kind get clusters
+  14 kind delete cluster
+  15 ls
+  16 kind create cluster-one-control-plane.yaml
+  17 kind create cluster --config .\cluster-one-control-plane.yaml --name multinodes
+  18 kind create cluster --config .\cluster-one-control-plane.yaml --name multinodes
+  19 kind create cluster --config .\cluster-one-control-plane.yaml --name multinodes
+  20 kind create cluster --config .\cluster-one-control-plane.yaml --name multinodes
+  21 kind get clusters
+  22 kind get nodes
+  23 kubectl get nodes
+  24 kubectl get pods
+  25 kubectl get pod
