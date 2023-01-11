@@ -48,3 +48,16 @@ kind delete cluster --name nomecluster
   23 kubectl get nodes
   24 kubectl get pods
   25 kubectl get pod
+  kubectl get replicaset
+   9 kubectl get deployment
+  10 kubectl describe deployment mydeployment
+  11 kubectl port-forward pod/mydeployment-7f5c66476f-5npgs 8080:80
+  12 kubectl delete pod mydeployment-7f5c66476f-5npgs
+  13 kubectl get pods
+  14 kubectl delete -f .\myreplicaset.yaml
+  15 kubectl get pods
+  16 kubectl scale replicaset  mydeployment --replicas=20
+  17 kubectl scale deployment mydeployment --replicas=20
+  18 kubectl get pods
+  19 kubectl get pods -o wide
+kubectl rollout undo deployment mydeployment
