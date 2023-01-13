@@ -1,0 +1,52 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api 
+          image: joaotixavier/pedelogo-catalogo:v1.2
+          ports:
+          - containerPort: 80
+            name:  http
+          - containerPort: 443
+            name:  https
+          imagePullPolicy: Always
+          readinessProbe:
+            httpGet:
+              path: /read
+              port: 80
+              scheme: HTTP
+            periodSeconds: 5
+            timeoutSeconds: 1
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /health
+              scheme: HTTP
+              port: 80
+            periodSeconds: 5
+            timeoutSeconds: 1
+            failureThreshold: 10
+          envFrom:
+            - configMapRef:
+                name: configmap-api
+          env:
+          - name: Mongo__User
+            valueFrom:
+              secretKeyRef:
+                key: MONGO_INITDB_ROOT_USERNAME
+                name: secret-mongo
+          - name: Mongo__Password
+            valueFrom:
+              secretKeyRef:
+                key: MONGO_INITDB_ROOT_PASSWORD
+                name: secret-mongo
