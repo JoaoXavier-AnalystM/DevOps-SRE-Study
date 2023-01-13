@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: configmap-mongo
-data:
-  MONGO_INITDB_ROOT_USERNAME: mongouser
-  MONGO_INITDB_ROOT_PASSWORD: mongopwdsreops

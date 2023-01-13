@@ -14,4 +14,4 @@ spec:
     name: https
   type: NodePort
 
-## EXEC kubectl port-forward pod/api-deployment-86bfccd5f7-7xrwn 8080:80 para expor api http://localhost:8080/swagger
+## EXEC kubectl port-forward pod/api-deployment-84f684cdc5-dbpw9 8080:80 para expor api http://localhost:8080/swagger

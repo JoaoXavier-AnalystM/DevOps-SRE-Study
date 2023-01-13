@@ -17,5 +17,5 @@ spec:
         ports:
           - containerPort: 27017
         envFrom:
-          - configMapRef:
-              name: configmap-mongo
+          - secretRef:
+              name: secret-mongo

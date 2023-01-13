@@ -26,13 +26,11 @@ spec:
           env:
           - name: Mongo__User
             valueFrom:
-              configMapKeyRef:
+              secretKeyRef:
                 key: MONGO_INITDB_ROOT_USERNAME
-                name: configmap-mongo
+                name: secret-mongo
           - name: Mongo__Password
             valueFrom:
-              configMapKeyRef:
+              secretKeyRef:
                 key: MONGO_INITDB_ROOT_PASSWORD
-                name: configmap-mongo
-          
-            
+                name: secret-mongo
