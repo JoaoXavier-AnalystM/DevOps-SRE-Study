@@ -30,5 +30,5 @@ spec:
 
 
 #curl --data “millicores=[UTILIZAÇÃO]&durationSec=[SEGUNDOS]” http://localhost:8082/ConsumeCPU
-#curl --data “mmegabytes=20&durationSec=30” http://localhost:8080/consumer
+#curl --data “megabytes=20&durationSec=30” http://localhost:8080/ConsumeMem
 #curl --data "millicores=300&durationSec=600" http://localhost:8080/ConsumeCPU
