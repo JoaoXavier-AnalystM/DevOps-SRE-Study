@@ -1,0 +1,14 @@
+Apply complete! Resources: 11 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+ssh-with-k8s-user = <<EOT
+
+ssh -o StrictHostKeyChecking=no -i id_rsa -l k8s 150.136.41.48
+
+EOT
+ssh-with-ubuntu-user = <<EOT
+ssh -o StrictHostKeyChecking=no -l ubuntu -p 22 -i id_rsa 150.136.41.48 # node1
+ssh -o StrictHostKeyChecking=no -l ubuntu -p 22 -i id_rsa 150.136.70.41 # node2
+ssh -o StrictHostKeyChecking=no -l ubuntu -p 22 -i id_rsa 129.213.81.127 # node3
+ssh -o StrictHostKeyChecking=no -l ubuntu -p 22 -i id_rsa 129.213.128.83 # node4
