@@ -1,0 +1,22 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: kind-cluster-1
+networking:
+  ipFamily: ipv6
+  apiServerAddress: 127.0.0.1
+  apiServerPort: 6443
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+- role: worker
+# port forward 80 on the host to 80 on this node
+  extraPortMappings:
+  - containerPort: 80
+    hostPort: 80
+    # optional: set the bind address on the host
+    # 0.0.0.0 is the current default
+    listenAddress: "127.0.0.1"
+    # optional: set the protocol to one of TCP, UDP, SCTP.
+    # TCP is the default
+    protocol: TCP

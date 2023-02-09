@@ -4,4 +4,4 @@ metadata:
   name: obj-resource
 spec:
   hard:
-    pods: "12"
+    pods: "5"
