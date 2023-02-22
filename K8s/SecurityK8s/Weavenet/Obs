@@ -1,0 +1,4 @@
+#Apos a criar o Cluster, utilizar o seguinte comando para instalção do weave net
+
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+

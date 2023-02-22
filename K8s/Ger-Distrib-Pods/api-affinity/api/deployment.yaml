@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      containers:
+        - name: api 
+          image: joaotixavier/pedelogo-catalogo:v1.1.0
+          ports:
+          - containerPort: 80
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: configmap-api
+          resources:
+            limits:
+              memory: "64Mi"
+              cpu: "250m"
+          env:
+          - name: Mongo__User
+            valueFrom:
+              secretKeyRef:
+                key: MONGO_INITDB_ROOT_USERNAME
+                name: secret-mongo
+          - name: Mongo__Password
+            valueFrom:
+              secretKeyRef:
+                key: MONGO_INITDB_ROOT_PASSWORD
+                name: secret-mongo
+      affinity:
+        podAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 1
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname
+                labelSelector:
+                  matchExpressions:
+                    - key: app
+                      operator: In
+                      values:
+                        - "mongodb"
+        podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+              - weight: 2
+                podAffinityTerm:
+                  topologyKey: kubernetes.io/hostname
+                  labelSelector:
+                    matchExpressions:
+                      - key: app
+                        operator: In
+                        values:
+                          - "api"
+

@@ -5,3 +5,5 @@ nodes:
 - role: worker
 - role: worker
 - role: worker
+
+#kind create cluster --name kind-multi-nodes --image kindest/node:v1.26.0 --config .\cluster-one-control-plane.yaml

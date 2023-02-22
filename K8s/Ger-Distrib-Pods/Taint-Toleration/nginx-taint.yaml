@@ -1,19 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginxbbb
+  name: nginx
 spec:
-  replicas: 2
   selector:
     matchLabels:
-      app: nginxbbb
+      app: nginx
   template:
     metadata:
       labels:
-        app: nginxbbb
+        app: nginx
     spec:
       containers:
-      - name: nginxbbb
+      - name: nginx
         image: nginx
         resources:
           limits:
@@ -21,3 +20,9 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 80
+      tolerations:
+        - key: "special"
+          operator: "Equal"
+          value: "valor1"
+          effect: "NoExecute"
+          tolerationSeconds: 30

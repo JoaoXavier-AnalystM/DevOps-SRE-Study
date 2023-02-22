@@ -61,4 +61,4 @@ kind delete cluster --name nomecluster
   18 kubectl get pods
   19 kubectl get pods -o wide
 kubectl rollout undo deployment mydeployment
-kubectl run -i --tty --image kubedevio/ubuntu-curl ping-test --restart=Never --rm -- /bin/bash
+kubectl run -i --tty --image kubedevio/ubuntu-curl ping-test --restart=Never --rm -- curl http://nginx
