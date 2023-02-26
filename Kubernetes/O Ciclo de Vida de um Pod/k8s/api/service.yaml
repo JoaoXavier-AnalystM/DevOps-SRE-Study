@@ -12,6 +12,6 @@ spec:
   - port: 443
     targetPort: 443
     name: https
-  type: NodePort
+  type: LoadBalancer
 
 ## EXEC kubectl port-forward pod/api-deployment-84f684cdc5-dbpw9 8080:80 para expor api http://localhost:8080/swagger
