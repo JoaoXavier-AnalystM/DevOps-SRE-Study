@@ -1,0 +1,5 @@
+groups:
+- name: MongoDb
+  rules:
+  - alert:  MongoDBAlert
+    expr: rate(mongo_)

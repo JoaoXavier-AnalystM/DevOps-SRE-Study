@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-api
+data:
+  Mongo__Host: mongo-service
+  Mongo__User: mongouser
+  Mongo__Password: mongopwdsreops
+  Mongo__Port: "27017"
+  Mongo__DataBase: admin
