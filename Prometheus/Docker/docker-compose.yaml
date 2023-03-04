@@ -3,9 +3,9 @@ services:
   api:
     image: joaotixavier/pedelogo-catalogo:1.3
     ports:
-      - "7070:80"
+      - "8080:80"
     networks:
-      - pedelogo
+      - docker_pedelogo
     depends_on:
       - pedelogo-mongodb
     environment:
@@ -18,7 +18,7 @@ services:
   pedelogo-mongodb:
     image: mongo:4.2.8
     networks:
-      - pedelogo
+      - docker_pedelogo
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoroot
       MONGO_INITDB_ROOT_PASSWORD: mongopwd
@@ -28,7 +28,7 @@ services:
     ports:
       - "9216:9216"
     networks:
-      - pedelogo
+      - docker_pedelogo
     depends_on:
       - pedelogo-mongodb
     environment:
@@ -43,8 +43,8 @@ services:
     depends_on:
       - api
     networks:
-      - pedelogo
+      - docker_pedelogo
     
 networks:
-    pedelogo:
+    docker_pedelogo:
       driver: bridge
