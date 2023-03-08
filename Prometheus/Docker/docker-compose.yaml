@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   api:
-    image: joaotixavier/pedelogo-catalogo:1.3
+    image: kubedevio/pedelogo-catalogo:v1.0.0
     ports:
       - "8080:80"
     networks:
@@ -9,18 +9,20 @@ services:
     depends_on:
       - pedelogo-mongodb
     environment:
-      Mongo__Host: mongo-service
-      Mongo__User: mongouser
-      Mongo__Password: mongopwdsreops
+      Mongo__Host: "pedelogo-mongodb"
+      Mongo__User: "mongouser"
+      Mongo__Password: "mongopwd"
       Mongo__Port: "27017"
-      Mongo__DataBase: admin
+      Mongo__DataBase: "admin"
 
   pedelogo-mongodb:
     image: mongo:4.2.8
+    volumes:
+      - db_mongo:/data/db
     networks:
       - docker_pedelogo
     environment:
-      MONGO_INITDB_ROOT_USERNAME: mongoroot
+      MONGO_INITDB_ROOT_USERNAME: mongouser
       MONGO_INITDB_ROOT_PASSWORD: mongopwd
 
   mongoexporter:
@@ -32,19 +34,31 @@ services:
     depends_on:
       - pedelogo-mongodb
     environment:
-      MONGO_URI:  "mongodb://mongoroot:mongopwd@pedelogo-mongodb:27017"
+      MONGODB_URI:  "mongodb://mongouser:mongopwd@pedelogo-mongodb:27017"
 
   prometheus:
     image: prom/prometheus:v2.24.1
     volumes:
       - ./prometheus.yaml:/etc/prometheus/prometheus.yml
+      - ./alert.rules.yaml:/etc/prometheus/alerts.rules
     ports:
       - "9090:9090"
     depends_on:
       - api
     networks:
       - docker_pedelogo
-    
+  
+  alertmanager:
+    image: prom/alertmanager:v0.21.0
+    ports:
+      - 9093:9093
+    volumes:
+      - ./alertmanager.yaml:/prometheus/alertemanager.yml
+    networks:
+      - docker_pedelogo
+
+volumes:
+  db_mongo:
 networks:
-    docker_pedelogo:
-      driver: bridge
+  docker_pedelogo:
+    driver: bridge

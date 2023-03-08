@@ -1,0 +1,37 @@
+datetime="2023-03-08 04:37:16.4034" eventId=0 logLevel="DEBUG" logger="PedeLogo.Catalogo.Api.Program" message="init main" exception="" url= action=
+datetime="2023-03-08 04:37:16.8143" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Now listening on: http://[::]:80" exception="" url= action=
+datetime="2023-03-08 04:37:16.8443" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Application started. Press Ctrl+C to shut down." exception="" url= action=
+datetime="2023-03-08 04:37:16.8596" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Hosting environment: Production" exception="" url= action=
+datetime="2023-03-08 04:37:16.8698" eventId=0 logLevel="INFO" logger="Microsoft.Hosting.Lifetime" message="Content root path: /app" exception="" url= action=
+datetime="2023-03-08 04:37:58.5460" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:37:58.5945" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:37:58.6116" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:37:58.9928" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:37:59.1773" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:37:59.3651" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:37:59.5357" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:37:59.7113" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:37:59.8828" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:00.0709" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:00.2704" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:00.4764" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:00.6684" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:00.8638" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:01.0615" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:01.2636" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:01.4742" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:01.6736" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:01.8623" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:02.0465" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:17.2557" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:17.4405" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:17.6106" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:17.7973" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:17.9736" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:18.1484" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:18.3411" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:18.5200" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:18.7170" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:18.9056" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:19.0992" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get
+datetime="2023-03-08 04:38:19.2403" eventId=0 logLevel="INFO" logger="PedeLogo.Catalogo.Api.Controllers.ProdutoController" message="Entrou no Get All" exception="" url=http://localhost/Produto action=Get

@@ -2,7 +2,7 @@ groups:
 - name: MongoDb
   rules:
   - alert:  MongoDBAlert
-    expr: rate(mongo_op_counters_total{type="query"}[10m]) > 0.15
+    expr: rate(mongodb_op_counters_total{type="query"}[10m]) > 0.15
     for: 5s
     labels:
       team: mongodb
