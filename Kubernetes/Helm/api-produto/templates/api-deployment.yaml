@@ -24,12 +24,26 @@ spec:
           limits:
             cpu: "500m"
             memory: "64Mi"           
+        envFrom:
+        - configMapRef:
+            name: {{ .Release.Name }}-api-configmap
         env:
           - name: Mongo__User
-            value: {{ .Values.mongodb.credentials.userName }}
+            valueFrom:
+              secretKeyRef:
+                key: MONGO_INITDB_ROOT_USERNAME
+                {{ if empty .Values.mongodb.existSecret }}
+                name: {{ .Release.Name }}-mongo-secret
+                {{- else }}
+                name: {{ .Values.mongodb.existSecret }}
+                {{- end}}
           - name: Mongo__Password
-            value: {{ .Values.mongodb.credentials.userPassword }}
-          - name: Mongo__Host
-            value: {{ .Release.Name }}-mongo-service
-          - name: Mongo__DataBase
-            value: {{ .Values.mongodb.databaseName }}
+            valueFrom:
+              secretKeyRef:
+                key: MONGO_INITDB_ROOT_PASSWORD
+                {{ if empty .Values.mongodb.existSecret }}
+                name: {{ .Release.Name }}-mongo-secret
+                {{- else }}
+                name: {{ .Values.mongodb.existSecret }}
+                {{- end}}
+                

@@ -23,8 +23,12 @@ spec:
           limits:
             cpu: "1500m"
             memory: "1Gi"
-        env:        
-          - name: MONGO_INITDB_ROOT_USERNAME
-            value: {{ .Values.mongodb.credentials.userName }}
-          - name: MONGO_INITDB_ROOT_PASSWORD
-            value: {{ .Values.mongodb.credentials.userPassword }}
+        envFrom: 
+          {{ if empty .Values.mongodb.existSecret }}
+          - secretRef:
+              name: {{ .Release.Name }}-mongo-secret
+          {{- else }}
+          - secretRef:
+              name: {{ .Values.mongodb.existSecret }}
+          {{- end}}
+
