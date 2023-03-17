@@ -1,0 +1,69 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: path-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths: 
+      - path: /blue
+        pathType: Prefix
+        backend:
+          service:
+            name: web-blue
+            port: 
+              number: 80
+      - path: /green
+        pathType: Prefix
+        backend:
+          service:
+            name: web-green
+            port: 
+              number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dominio-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: blue.localhost
+    http:
+      paths: 
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: web-blue
+            port: 
+              number: 80
+  - host: green.localhost
+    http:
+      paths:          
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: web-green
+            port: 
+              number: 80
+---    
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: padrao-ingress
+spec:
+  ingressClassName: nginx
+  defaultBackend:
+    service:
+      name: nginx
+      port:
+        number: 80
+
+
+###Caso gere errro no ingress
+###kubectl delete -A ValidatingWebhookConfiguration ingress-nginx-admission

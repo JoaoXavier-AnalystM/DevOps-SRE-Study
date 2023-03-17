@@ -1,0 +1,16 @@
+api:
+  image:  fabricioveronez/pedelogo-catalogo:v1
+  serviceType: LoadBalancer
+  ingress: ["url", "URL"]
+  
+
+mongodb:
+  
+  credentials:
+    auth:
+    rootPassword: mongoRoot
+    username: mongoUsser
+    password: mongopwd
+    databese: produto
+  persistence:
+    enable: true
